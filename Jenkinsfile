@@ -3,8 +3,7 @@ pipeline{
     stages{
       stage('1-git clone'){
         steps{
-        sh 'df -h'
-        echo "Git clone"
+       checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'NanjeD', url: 'https://github.com/NanjeD/jenkins_jobs.git']])
         }
       }
       stage('2-system check'){
