@@ -37,5 +37,10 @@ pipeline{
           sh 'ps -ef'
         }
       }
+      stage{
+        steps{
+            sh 'whoami'
+        }
+      }
     }
   }
