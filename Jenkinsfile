@@ -41,5 +41,10 @@ pipeline{
             sh 'whoami'
         }
       }
+      stage('security check'){
+        steps{
+            sh 'bash -x /var/lib/jenkins/workspace/demo-groovy/security.sh'
+        }
+      }
     }
   }
