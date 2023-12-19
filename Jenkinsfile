@@ -37,7 +37,7 @@ pipeline{
           sh 'ps -ef'
         }
       }
-      stage{
+      stage('7-the seventh steps'){
         steps{
             sh 'whoami'
         }
